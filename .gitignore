@@ -10,11 +10,15 @@ vendor
 .bowerrc
 .editorconfig
 .jscsrc
+.jshintrc
 *.yml
 composer.lock
 composer.json
 gulpfile.js
 ruleset.xml
+bower.json
+package.json
+
 
 # Compiled source #
 ###################
