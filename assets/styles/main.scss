@@ -18,11 +18,12 @@
 @import "layouts/posts";
 @import "layouts/tinymce";
 
-body {
+body.home {
     background: #333;
+    color: white;
 }
 
-a {
+body.home a {
     color: #23BDE7;
     text-decoration: none;
     
