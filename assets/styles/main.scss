@@ -18,12 +18,26 @@
 @import "layouts/posts";
 @import "layouts/tinymce";
 
-body.home {
+body.blog {
     background: #333;
     color: white;
 }
 
-body.home a {
+body.blog a {
+    color: #23BDE7;
+    text-decoration: none;
+    
+    &:hover {
+        color: gold;
+        text-decoration: underline;
+    }
+}
+body.page {
+    background: #333;
+    color: white;
+}
+
+body.page a {
     color: #23BDE7;
     text-decoration: none;
     

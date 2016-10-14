@@ -86,6 +86,7 @@ function display_sidebar() {
     is_404(),
     is_home(),
     is_single(),
+    is_page(),
     is_front_page(),
     is_page_template('home.php'),
     is_page_template('template-custom.php'),
