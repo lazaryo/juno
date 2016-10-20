@@ -1,0 +1,33 @@
+.content-info {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    height: 50px;
+    background: #333333;
+    color: white;
+
+    .container {
+        display: table;
+        width: 100%;
+        
+        .copy {
+            float: left;
+            display: table-cell;
+            vertical-align: middle;
+            line-height: 50px;
+        }
+    
+        .fa-arrow-up {
+            float: right;
+            display: table-cell;
+            vertical-align: middle;
+            line-height: 50px;
+            color: #555;
+            
+            &:hover {
+                color: #FFF;
+                cursor: pointer;
+            }
+        }
+    }
+}

@@ -8,44 +8,11 @@
             <?php bloginfo('name'); ?>
         </a>
         
-        <?php if (is_home()) {?>
-
-        <nav class="pushy pushy-right" style="visibility: visible;">
-            <ul>
-                <li class="title">Sort by</li>
-                <li class="pushy-submenu pushy-submenu-closed">
-                    <a href="#">Id</a>
-                    <ul>
-                        <li class="pushy-link"><a class="sort" data-sort="id:asc" href="#">ASC</a></li>
-                        <li class="pushy-link"><a class="sort" data-sort="id:desc" href="#">DESC</a></li>
-                    </ul>
-                </li>
-                <li class="pushy-submenu pushy-submenu-closed">
-                    <a href="#">Title</a>
-                    <ul>
-                        <li class="pushy-link"><a class="sort" data-sort="title:asc" href="#">ASC</a></li>
-                        <li class="pushy-link"><a class="sort" data-sort="title:desc" href="#">DESC</a></li>
-                    </ul>
-                </li>
-                <li class="pushy-submenu pushy-submenu-closed">
-                    <a href="#">Date</a>
-                    <ul>
-                        <li class="pushy-link"><a class="sort" data-sort="date:asc" href="#">ASC</a></li>
-                        <li class="pushy-link"><a class="sort" data-sort="date:desc" href="#">DESC</a></li>
-                    </ul>
-                </li>
-                <li>Filter by</li>
-                <li class="pushy-submenu pushy-submenu-closed"><a href="#">Filter by</a>
-                    <ul>
-                        <li class="pushy-link"><a class="filter active" data-filter="all" href="#">Show All</a></li>
-                        <li class="pushy-link"><a class="filter" data-filter=".poem" href="#">Poem</a></li>
-                        <li class="pushy-link"><a class="filter" data-filter=".short-story" href="#">Short Story</a></li>
-                        <li class="pushy-link"><a class="filter" data-filter=".dream" href="#">Dream</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
         
+        <?php if (is_home()) {?>
+            <!-- add sorting menu here -->
+        <?php } else { ?>
+            <!-- add for single posts here -->
         <?php } ?>
     </div>
 </header>

@@ -18,31 +18,45 @@
 @import "layouts/posts";
 @import "layouts/tinymce";
 
-body.blog {
-    background: #333;
-    color: white;
+html {
+    position: relative;
+    min-height: 100%;
 }
 
-body.blog a {
-    color: #23BDE7;
-    text-decoration: none;
+body {
+    margin: 0 0 $height 0; /* bottom = footer height */
+}
+
+.banner {
+    height: 50px;
+    background: #333333;
+    margin-bottom: 20px;
     
-    &:hover {
-        color: gold;
-        text-decoration: underline;
+    .container {
+        height: 100%;
+        
+        a {
+            height: 100%;
+            
+            img {
+                height: 100%;
+            }
+        }
     }
 }
-body.page {
-    background: #333;
-    color: white;
-}
 
-body.page a {
-    color: #23BDE7;
-    text-decoration: none;
+.content-info {
+    width: 100%;
     
-    &:hover {
-        color: gold;
-        text-decoration: underline;
+    * {
+        max-width: none;
+    }
+    
+    .copy {
+        display: inline-block;
+    }
+    
+    .fa-arrow-up {
+        float: right;
     }
 }
