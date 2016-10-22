@@ -1,33 +1,16 @@
-.content-info {
+footer.content-info {
     width: 100%;
-    position: absolute;
-    bottom: 0;
-    height: 50px;
-    background: #333333;
-    color: white;
+    padding: 10px 0;
+    background-color: #333333;
+    color: #F9F9F9;
 
     .container {
+        position: relative;
         display: table;
-        width: 100%;
-        
-        .copy {
-            float: left;
-            display: table-cell;
-            vertical-align: middle;
-            line-height: 50px;
-        }
+    }
     
-        .fa-arrow-up {
-            float: right;
-            display: table-cell;
-            vertical-align: middle;
-            line-height: 50px;
-            color: #555;
-            
-            &:hover {
-                color: #FFF;
-                cursor: pointer;
-            }
-        }
+    .copy {
+        display: table-cell;
+        vertical-align: middle;
     }
 }

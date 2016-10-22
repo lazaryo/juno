@@ -73,5 +73,8 @@
 
   // Load Events
   $(document).ready(UTIL.loadEvents);
-
+    
+  $('.banner .fa-bars').on('click', function(){
+    // $('.nav-primary').slideToggle(); 
+  });
 })(jQuery); // Fully reference jQuery after this point.

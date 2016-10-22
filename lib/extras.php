@@ -19,6 +19,9 @@ function body_class($classes) {
   if (Setup\display_sidebar()) {
     $classes[] = 'sidebar-primary';
   }
+    
+  // Add more statements to give certain pages classes here
+   $classes[] = 'juno';
 
   return $classes;
 }

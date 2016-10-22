@@ -10,4 +10,4 @@
 
 <?php get_template_part('templates/content', 'home'); ?>
 
-<?php the_posts_navigation(); ?>
+<?php //the_posts_navigation(); ?>

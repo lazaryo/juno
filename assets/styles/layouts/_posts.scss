@@ -1,0 +1,31 @@
+#area.row {
+    .post {
+        margin: 10px 15px;
+        padding: 15px;
+        border-radius: 5px;
+        background: #FFFFFF;
+        text-align: center;
+
+        .piece-banner {
+            height: 100px;
+            border-radius: 5px;
+        }
+
+        * {
+            margin: 0;
+        }
+
+        .piece-title {
+            margin: 10px 0;
+            font-size: 23px;
+        }
+
+        .piece-date {
+            margin: 10px 0;
+        }
+
+        .piece-categories {
+            margin: 0 0 10px 0;
+        }
+    }
+}

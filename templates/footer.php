@@ -6,6 +6,6 @@
     echo $fromYear . (($fromYear != $thisYear) ? '-' . $thisYear : '');?> <a href="http://malikdh.com">Malik Hemphill</a>
     </div>
     
-    <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    <i id="to-top" class="fa fa-arrow-up" aria-hidden="true"></i>
   </div>
 </footer>
