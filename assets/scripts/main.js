@@ -11,7 +11,6 @@
  * ======================================================================== */
 
 (function($) {
-
   // Use this variable to set up the common and page specific functions. If you
   // rename this variable, you will also need to rename the namespace below.
   var Sage = {
@@ -19,6 +18,27 @@
     'common': {
       init: function() {
         // JavaScript to be fired on all pages
+        $('.bars').on('click', function() {
+            $(this).removeAttr('href');
+            $('.lana').toggleClass('isOpen');
+        });
+          
+        $('.nav li.menu-item-has-children > a').click( function(){
+            $(this).removeAttr('href');
+            var element = $(this).parent('li');
+            if (element.hasClass('open')) {
+                element.removeClass('open');
+                element.find('li').removeClass('open');
+                element.find('ul').slideUp(250);
+            } else {
+                element.addClass('open');
+                element.children('ul').slideDown(250);
+                element.siblings('li').children('ul').slideUp(250);
+                element.siblings('li').removeClass('open');
+                element.siblings('li').find('li').removeClass('open');
+                element.siblings('li').find('ul').slideUp(250);
+            }
+        });
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired
@@ -73,8 +93,5 @@
 
   // Load Events
   $(document).ready(UTIL.loadEvents);
-    
-  $('.banner .fa-bars').on('click', function(){
-    // $('.nav-primary').slideToggle(); 
-  });
+
 })(jQuery); // Fully reference jQuery after this point.

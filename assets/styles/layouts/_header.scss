@@ -1,47 +1,13 @@
-.page-header {
-    display: block;
-    text-align: center;
-    margin: 10px 0;
-}
+header.banner {
+    height: 65px;
+    color: white !important;
 
-.banner {
-    background-color: #333333;
-    color: #F9F9F9;
-    padding: 10px 0;
-    
-    .container {
-        position: relative;
-        z-index: 999999;
+    .brand-link {
+        font-size: 20px;
+        display: block;
     }
     
-    .fa-bars {
-        padding: 5px 0 0 0;
-        float: right;
-    }
-    
-    .nav-primary {
-        display: none;
-        position: absolute;
-        top: 100%;
-        right: 0;
-        background-color: #333333;
-        padding: 10px;
-        
-        li {
-            width: 150px;
-            padding: 5px 0;
-        }
-        
-        .menu-item-has-children {
-            position: relative;
-            
-            
-            ul {
-                position: relative;
-                padding: 0;
-                display: none;
-            }
-        
-        }
+    .brand-desc {
+        color: #D9D9D9;
     }
 }
