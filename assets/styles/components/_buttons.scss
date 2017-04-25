@@ -1,28 +1,27 @@
 .to-post {
     display: block;
-    border-radius: 5px;
     background-color: #333333;
     color: #FFFFFF !important;
     padding: 10px 20px;
     text-decoration: none !important;
     text-align: center;
-    border-radius: 5px;
+    width: 100%;
     
     &:hover {
         color: #23BDE7 !important;
     }
 }
-
-#to-top {
-    display: none;
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    color: #555555;
-    padding: 13px;
-    background: #333333;
-    
-    &:hover {
-        color: #F9F9F9;
-    }
-}
+//
+//#to-top {
+//    display: none;
+//    position: fixed;
+//    right: 0;
+//    bottom: 0;
+//    color: #555555;
+//    padding: 13px;
+//    background: #333333;
+//    
+//    &:hover {
+//        color: #F9F9F9;
+//    }
+//}

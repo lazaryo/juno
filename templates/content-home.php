@@ -1,15 +1,11 @@
-<div id="area" class="row">
+<div id="area">
 <?php if( have_posts() ): ?>
 
     <?php while( have_posts() ): the_post(); ?>
-        <div id="post-<?php echo get_the_ID(); ?>" <?php post_class('col-md-3'); ?>>
-            <div class="piece-banner" style="background-color: <?php echo get_field('piece_color'); ?>"></div>
-            <h3 class="piece-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?>LOL</a></h3>
-            <a href="<?= get_author_posts_url(get_the_author_meta('ID')); ?>" rel="author" class="piece-author"><?= get_the_author(); ?></a>
-            <p class="piece-date"><?php echo get_field('piece_date'); ?></p>
-            <p class="piece-categories"><?php echo( get_the_category_list(', ') ); ?></p>
-            <a href="<?php the_permalink(); ?>" class="to-post">visit page</a>
-        </div><!-- /#post-<?php get_the_ID(); ?> -->
+        <a id="post-<?php echo get_the_ID(); ?>" <?php post_class(); ?> style="background: <?php echo get_field('piece_color'); ?>" href="<?php the_permalink(); ?>">
+            <span><?php the_title(); ?></span>
+<!--            <p><?php //echo get_field('piece_color'); ?></p>-->
+        </a><!-- /#post-<?php get_the_ID(); ?> -->
     <?php endwhile; ?>
 
 <!--
