@@ -14,7 +14,7 @@
                 <?php _e('You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.', 'sage'); ?>
             </div>
         <![endif]-->
-        <div class="side">
+        <div class="off-canvas side">
             <div class="title"><a href="<?= esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a></div>
             <ul class="nav">
                 <!-- Add more links here -->
@@ -27,9 +27,9 @@
 <!--                </nav>-->
                 <li>
                     <a href="<?php if (is_user_logged_in()) {
-                                echo wp_logout_url( get_permalink() );
+                                echo wp_logout_url( get_home_url() );
                             } else {
-                                echo wp_login_url( get_permalink() );
+                                echo wp_login_url( get_home_url() );
                             }
                         ?>"><?php if (is_user_logged_in()) {echo 'Logout';} else {echo 'Login';} ?>
                     </a>
@@ -55,6 +55,14 @@
                     <?php include Wrapper\template_path(); ?>
                 </main><!-- /.main -->
             </div><!-- /.content -->
+            
+            <div id="top-wrap">
+                <a id="to-top" href="#">
+                    <i class="fa fa-arrow-up" aria-hidden="true"></i>
+                </a>
+            </div>
+            
+            <?php get_template_part('templates/footer'); ?>
         </div><!-- /.wrap -->
 
         <?php

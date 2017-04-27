@@ -54,27 +54,16 @@ body {
         display: flex;
         min-height: 100%;
         
-        .bars {
-            cursor: pointer;
-            float: right;
-            color: #333;
-            text-decoration: none;
-            
-            &:hover {
-                color: #23BDE7;
-            }
-        }
-
-        .bars:before {
-            content: '\f0c9';
-            font: 25px fontawesome;
-        }
-        
         .side {
+            display: none;
             position: absolute;
             width: 220px;
             right: 0;
             height: 100vh;
+            
+            &.show-canvas {
+                display: block;
+            }
             
             .title {
                 font-size: 15px;
@@ -196,7 +185,7 @@ body {
             width: auto !important;
             max-width: none !important;
             flex: 1;
-            padding: 30px;
+            padding: 0;
             background: white;
             box-shadow: 0 0 5px rgba(0,0,0,1);
             transform: translate3d(0,0,0);

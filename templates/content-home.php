@@ -1,19 +1,13 @@
-<div id="area">
+<div id="area" class="row">
 <?php if( have_posts() ): ?>
 
     <?php while( have_posts() ): the_post(); ?>
-        <a id="post-<?php echo get_the_ID(); ?>" <?php post_class(); ?> style="background: <?php echo get_field('piece_color'); ?>" href="<?php the_permalink(); ?>">
-            <span><?php the_title(); ?></span>
-<!--            <p><?php //echo get_field('piece_color'); ?></p>-->
-        </a><!-- /#post-<?php get_the_ID(); ?> -->
+        <a id="post-<?php echo get_the_ID(); ?>" <?php post_class('col-md-4'); ?> href="<?php the_permalink(); ?>">
+            <span style="background: url('<?php echo get_the_post_thumbnail_url(); ?>')"><?php the_title(); ?></span>
+            <input class="bg" type="hidden" value="<?php echo get_the_post_thumbnail_url(); ?>">
+            <input class="color" type="hidden" value="<?php echo get_field('piece_color'); ?>">
+        </a><!-- /#post-<?php echo get_the_ID(); ?>-->
     <?php endwhile; ?>
-
-<!--
-	<div class="navigation">
-		<span class="newer"><?php previous_posts_link(__('« Newer','example')) ?></span>
-		<span class="older"><?php next_posts_link(__('Older »','example')) ?></span>
-    </div> /.navigation 
--->
 
 <?php else: ?>
 
