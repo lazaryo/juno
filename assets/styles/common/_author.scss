@@ -1,0 +1,49 @@
+$col1: 538px;
+$col2: 802px;
+$col3: 1066px;
+$col4: 1330px;
+
+@mixin col4 {
+    @media (max-width: #{$col4}) {
+        @content;
+    }
+}
+
+@mixin col3 {
+    @media (min-width: #{$col3}) and (max-width: #{$col4 - 1px}) {
+        @content;
+    }
+}
+
+@mixin col2 {
+    @media (min-width: #{$col2}) and (max-width: #{$col3 - 1px}) {
+        @content;
+    }
+}
+
+@mixin col1 {
+    @media (max-width: #{$col2 - 1px}) {
+        @content;
+    }
+}
+
+.author-posts {
+    max-width: 1325px;
+    margin: 0 auto !important;
+
+    @include col4 {
+        max-width: 1060px !important;
+    }
+    
+    @include col3 {
+        max-width: 795px !important;
+    }
+    
+    @include col2 {
+        max-width: 530px !important;
+    }
+    
+    @include col1 {
+        max-width: 265px !important;
+    }
+}

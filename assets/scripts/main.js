@@ -10,6 +10,12 @@
                     $('.off-canvas').toggleClass('show-canvas');
                 });
                 
+                $('.switch-dot').on('click', function() {
+                    var postID = $(this).parent().attr('id');
+                    $('#' + postID + ' .front').toggleClass('moved1');
+                    $('#' + postID + ' .back').toggleClass('moved2');
+                });
+                
                 $('.post').on('mouseover', function() {
                     var postID = $(this).attr('id');
                     var hex = $('#' + postID + ' .color').val();

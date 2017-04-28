@@ -16,6 +16,7 @@
 @import "layouts/footer";
 @import "layouts/pages";
 @import "layouts/posts";
+@import "common/author";
 @import "layouts/tinymce";
 
 * {
@@ -193,6 +194,12 @@ body {
             
             &.isOpen {
                 transform: translate3d(-220px,0,0);
+            }
+        }
+        
+        .author {
+            .lana {
+                width: 100px !important;
             }
         }
     }
