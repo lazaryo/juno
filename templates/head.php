@@ -8,6 +8,32 @@
   
     <?php wp_head(); ?>
     
+    <?php if( is_page() ): ?>
+    <style>
+        header.banner {
+            background: <?php echo get_field('piece_color'); ?>;
+        }
+        
+        .page-header h1 {
+            background: <?php echo get_field('piece_color'); ?>;
+            color: white;
+            margin-bottom: 0;
+        }
+        
+        header.banner a {
+            color: #FFF !important;
+        }
+        header.banner a:hover {
+            color: #333 !important;
+            cursor: pointer;
+        }
+        .special-wrap {
+            margin: 0;
+            padding: 15px;
+        }
+    </style>
+    <?php endif; wp_reset_query(); ?>    
+    
     <?php if( is_single() ): ?>
     <style>
         #disqus_thread {

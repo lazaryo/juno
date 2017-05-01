@@ -88,6 +88,8 @@ function display_sidebar() {
     is_single(),
     is_front_page(),
     is_author(),
+    is_page(),
+    is_search(),
     is_page_template('template-custom.php'),
   ]);
 

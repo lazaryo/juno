@@ -17,6 +17,7 @@
 @import "layouts/pages";
 @import "layouts/posts";
 @import "common/author";
+@import "common/search";
 @import "layouts/tinymce";
 
 * {
@@ -87,7 +88,7 @@ body {
             .socials {
                 width: 100%;
                 text-align: center;
-                margin: 25px 0 0 0;
+                margin: 15px 0 0 0;
                 
                 li {
                     margin: 0 5px;

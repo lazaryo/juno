@@ -18,13 +18,11 @@
             <div class="title"><a href="<?= esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a></div>
             <ul class="nav">
                 <!-- Add more links here -->
-<!--                <nav class="nav-primary">-->
                 <?php
                     if (has_nav_menu('primary_navigation')) :
                         wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav']);
                     endif;
                 ?>
-<!--                </nav>-->
                 <li>
                     <a href="<?php if (is_user_logged_in()) {
                                 echo wp_logout_url( get_home_url() );
@@ -35,13 +33,15 @@
                     </a>
                 </li>
             </ul>
-            
+                        
             <ul class="socials">
                 <li><a href="http://codepen.io/lazaryo/" target="_blank"><i class="fa fa-codepen"></i></a></li>
                 <li><a href="http://lazaryo.tumblr.com/" target="_blank"><i class="fa fa-tumblr"></i></a></li>
                 <li><a href="https://www.youtube.com/channel/UC1Qqd7Bh1PGtHpjw1MwSSIw" target="_blank"><i class="fa fa-youtube"></i></a></li>
                 <li><a href="https://github.com/lazaryo" target="_blank"><i class="fa fa-github"></i></a></li>
             </ul>
+            
+            <?php get_search_form(); ?>
         </div>
         
         <div class="lana wrap container" role="document">

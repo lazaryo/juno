@@ -10,6 +10,10 @@
                     $('.off-canvas').toggleClass('show-canvas');
                 });
                 
+                $('.search-icon').on('click', function() {
+                    $('.off-canvas-search').toggleClass('form-visibility');
+                });
+                
                 $('.switch-dot').on('click', function() {
                     var postID = $(this).parent().attr('id');
                     $('#' + postID + ' .front').toggleClass('moved1');
