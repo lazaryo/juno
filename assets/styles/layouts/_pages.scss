@@ -1,137 +1,102 @@
-body.search {
-    header.banner {
-        background: #ddd;
-    }
-    
-    .search-header {
-        h1 {
-            margin: 0;
-            text-align: center;
-            padding: 30px;
-            background: #ddd;
-        }
-    }
-    
-    .results {
-        padding: 15px 15px 15px 20px;
-        margin: 0;
+/* Single Post Styling */
+body.single-post {
+    .page-header {
+            background-size: cover !important;
+            background-repeat: no-repeat !important;
+            background-position: 50% !important;
         
-        article {
-            text-align: center;
-            
-            > div {
-                box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 
-                            0 3px 1px -2px rgba(0,0,0,.2),
-                            0 1px 5px 0 rgba(0,0,0,.12);
-                margin: 15px 0;
-                border-radius: 5px;
+            h1 {
+                color: #FFF !important;
+                text-align: center;
+                font-size: 65px;
+                padding: 30px 0;
+                margin: 0;
+                display: block;
+            }
+        }
+
+        #disqus_thread {
+            max-width: 600px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        header.banner {
+            a {
+                color: #FFF !important;
                 
-                a {
-                    &:hover {
-                        cursor: pointer;
-                    }
-                }
-                
-                .entry-title {
-                    padding: 15px;
-                }
-                
-                .entry-meta {
-                    margin: 0;
-                    
-                    .col-md-6 {
-                        i {
-                            margin: 0 5px 0 0;
-                        }
-                    }
-                    
-                    .col-md-12 {
-                        text-align: left;
-                        padding: 15px;
-                        
-                        i {
-                            margin: 0 5px 0 0;
-                        }
-                    }
-                }
-                
-                .read {
-                    padding: 15px;
-                    display: block;
-                    color: white;
-                    border-bottom-right-radius: 5px;
-                    border-bottom-left-radius: 5px;
+                &:hover {
+                    color: #333 !important;
+                    cursor: pointer;
                 }
             }
         }
+        
+        .entry-meta {
+            width: 100%;
+            max-width: 570px;
+            padding: 30px;
+            text-align: center;
+            margin: 0 auto;
+        }
+        
+        .entry-meta .author:hover {
+            color: #FFF;
+            background: #333;
+        }
+        
+        .entry-content {
+            padding: 30px 15px;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        footer {
+            .copy {
+                color: #222;
+            }
+            
+            a {
+                color: #FFF !important;
+            }
+        }
+}
+
+/* Other Page Styling */
+body.search,
+body.archive,
+body.author,
+body.page {
+    .page-header {
+        background-size: cover !important;
+        background-repeat: no-repeat !important;
+        background-position: 50% !important;
+        margin: 0 0 15px 0;
+    }
+        
+    header.banner a {
+        color: #FFF !important;
+    }
+    
+    header.banner a:hover {
+            color: #333 !important;
+            cursor: pointer;
+    }
+    
+    .header-title {
+        color: #FFF !important;
+        text-align: center;
+        padding: 15px 0;
+        margin: 0;
+        display: block;
     }
 }
 
-body.archive {
-    header.banner {
-        background: #ddd;
-    }
-    
-    .archive-header {
-        h1 {
-            margin: 0;
-            text-align: center;
-            padding: 30px;
-            background: #ddd;
-        }
-    }
-    
-    .results {
-        padding: 15px 15px 15px 20px;
+body.special-template {
+    .special-wrap {
         margin: 0;
-        
-        article {
-            text-align: center;
-            
-            > div {
-                box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 
-                            0 3px 1px -2px rgba(0,0,0,.2),
-                            0 1px 5px 0 rgba(0,0,0,.12);
-                margin: 15px 0;
-                border-radius: 5px;
-                
-                a {
-                    &:hover {
-                        cursor: pointer;
-                    }
-                }
-                
-                .entry-title {
-                    padding: 15px;
-                }
-                
-                .entry-meta {
-                    margin: 0;
-                    
-                    .col-md-6 {
-                        i {
-                            margin: 0 5px 0 0;
-                        }
-                    }
-                    
-                    .col-md-12 {
-                        text-align: left;
-                        padding: 15px;
-                        
-                        i {
-                            margin: 0 5px 0 0;
-                        }
-                    }
-                }
-                
-                .read {
-                    padding: 15px;
-                    display: block;
-                    color: white;
-                    border-bottom-right-radius: 5px;
-                    border-bottom-left-radius: 5px;
-                }
-            }
-        }
+        padding: 15px;
     }
 }

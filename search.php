@@ -1,8 +1,6 @@
 <?php use Roots\Sage\Titles; ?>
 
-<div class="search-header">
-    <h1>Results for: <b><?php echo get_search_query(); ?></b></h1>
-</div>
+<?php get_template_part('templates/page', 'header'); ?>
 
 <?php if (!have_posts()) : ?>
     <div class="alert alert-warning">
@@ -11,8 +9,8 @@
     <?php get_search_form(); ?>
 <?php endif; ?>
 
-<div class="results row">
+<div class="row format3">
     <?php while (have_posts()) : the_post(); ?>
-        <?php get_template_part('templates/content', 'search'); ?>
+        <?php get_template_part('templates/results/content', 'format3'); ?>
     <?php endwhile; ?>
 </div>

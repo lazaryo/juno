@@ -18,13 +18,11 @@
     }
     
     .form-visibility {
-//        display: block !important;
         transform: translate3d(0px, 0px, 0px) !important;
         transition: all ease 1s;
     }
     
     .off-canvas-search {
-//        display: none;
         transform: translate3d(220px, 0px, 0px);
         transition: all ease 1s;
         

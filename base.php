@@ -44,12 +44,7 @@
             <?php get_search_form(); ?>
         </div>
         
-        <div class="lana wrap container" role="document">
-            <?php
-                do_action('get_header');
-                get_template_part('templates/header');
-            ?>
-            
+        <div class="juno-wrap wrap container" role="document">
             <div class="content row">
                 <main class="main">
                     <?php include Wrapper\template_path(); ?>

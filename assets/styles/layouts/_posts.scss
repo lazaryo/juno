@@ -1,46 +1,5 @@
-#area {
-    padding: 0 15px;
-    
-    .post {
-        border-radius: 5px;
-        text-align: center;
-        margin: 0 0 30px 0;
-        height: 200px;
-        display: inline-block;
-        text-decoration: none;
-        vertical-align: middle;
-        
-        span {
-            font-size: 25px;
-            color: #333;
-            display: block;
-            width: 100%;
-            height: 100%;
-            border-radius: 5px;
-            line-height: 200px;
-            border: 5px solid #333;
-            background-size: cover !important;
-            background-repeat: no-repeat !important;
-            background-position: center !important;
-        }
-    }
-}
-
-.author {
-    .banner {
-        background: #ddd;
-    }
-}
-
-.page-header {
-    h1 {
-        text-align: center;
-        padding: 30px;
-        background: #ddd;
-    }
-}
-
-.author-posts {
+/* Formatting the Results */
+div.format1 {
     .switch {
         position: relative;
         margin: 10px 0 0 10px;
@@ -143,6 +102,89 @@
         .moved2 {
             transform: translate3d(0,0,0);
             transition: transform .3s;
+        }
+    }
+}
+
+div.format2 {
+    padding: 0 15px;
+    
+    .post {
+        border-radius: 5px;
+        text-align: center;
+        margin: 0 0 30px 0;
+        height: 200px;
+        display: inline-block;
+        text-decoration: none;
+        vertical-align: middle;
+        
+        span {
+            font-size: 25px;
+            color: #FFF;
+            display: block;
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+            line-height: 200px;
+            border: 5px solid #333;
+            background-size: cover !important;
+            background-repeat: no-repeat !important;
+            background-position: center !important;
+        }
+    }
+}
+    
+div.format3 {
+    padding: 15px 15px 15px 20px;
+    margin: 0;
+        
+    article {
+        text-align: center;
+            
+        > div {
+            background: #FFF;
+            box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 
+                        0 3px 1px -2px rgba(0,0,0,.2),
+                        0 1px 5px 0 rgba(0,0,0,.12);
+            margin: 15px 0;
+            border-radius: 5px;
+                
+            a {
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+                
+            .entry-title {
+                padding: 15px;
+            }
+                
+            .entry-meta {
+                margin: 0;
+                    
+                .col-md-6 {
+                    i {
+                        margin: 0 5px 0 0;
+                    }
+                }
+                    
+                .col-md-12 {
+                    text-align: left;
+                    padding: 15px;
+                        
+                    i {
+                        margin: 0 5px 0 0;
+                    }
+                }
+            }
+                
+            .read {
+                padding: 15px;
+                display: block;
+                color: white;
+                border-bottom-right-radius: 5px;
+                border-bottom-left-radius: 5px;
+            }
         }
     }
 }

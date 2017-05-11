@@ -7,93 +7,52 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
   
     <?php wp_head(); ?>
-    
-    <?php if( is_page() ): ?>
     <style>
-        header.banner {
-            background: <?php echo get_field('piece_color'); ?>;
-        }
-        
-        .page-header h1 {
-            background: <?php echo get_field('piece_color'); ?>;
-            color: white;
-            margin-bottom: 0;
-        }
-        
-        header.banner a {
-            color: #FFF !important;
-        }
-        header.banner a:hover {
-            color: #333 !important;
-            cursor: pointer;
-        }
-        .special-wrap {
-            margin: 0;
-            padding: 15px;
+        /* Patten Background */
+        div.juno-wrap {
+            background: url('<?= get_template_directory_uri(); ?>/dist/images/dust.png');
         }
     </style>
-    <?php endif; wp_reset_query(); ?>    
     
-    <?php if( is_single() ): ?>
+    <?php if( is_home() ): ?>
     <style>
-        #disqus_thread {
-            max-width: 600px;
-            width: 100%;
-            margin: 0 auto;
-            padding: 0 15px;
+        /* home styles go here if they can't go into the scss files */
+    </style>
+    
+    <?php elseif( !is_single() && !is_home() ): ?>
+    <style>
+        .page-header {
+            /* background: <?php echo get_field('piece_color'); ?>; */
+            /* background: url('<?= get_template_directory_uri(); ?>/dist/images/lana-del-rey-music-to-watch-boys-to.gif'); */
+            /* background: url('<?= get_template_directory_uri(); ?>/dist/images/lana-del-rey-love.gif'); */
+            background: lightgrey;
+        }
+    </style>
+    
+    <?php else: ?>
+    <style>
+        .page-header.just-color {
+             background: <?php echo get_field('piece_color'); ?>; 
+        }
+        
+        .page-header.with-featured {
+             background: url('<?php echo get_the_post_thumbnail_url(); ?>'); 
         }
         
         #disqus_thread a {
              color: <?php echo get_field('piece_color'); ?> !important;
         }
         
-        header.banner {
-            background: <?php echo get_field('piece_color'); ?>;
-        }
-        
-        header.banner a {
-            color: #FFF !important;
-        }
-        header.banner a:hover {
-            color: #333 !important;
-            cursor: pointer;
-        }
-        
-        .entry-title {
-            color: #FFF;
-            text-align: center;
-            font-size: 65px;
-            padding: 30px 0;
-        }
-        
-        .entry-content {
-            padding: 30px 15px;
-            width: 100%;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        
-        div.time {
-            width: 100%;
-            text-align: center;
-        }
-        
-        div.time .updated {
-            padding-bottom: 10px;
-            color: <?php echo get_field('piece_color'); ?>;
+        .entry-meta {
             border-bottom: 5px solid <?php echo get_field('piece_color'); ?>;
+        }
+        
+        .entry-meta .author {
+            color: <?php echo get_field('piece_color'); ?>;
         }
         
         #top-wrap #to-top:hover {
             color: <?php echo get_field('piece_color'); ?> !important;
-        }
-        
-        footer .copy {
-            color: #222;
-        }
-        
-        footer a {
-            color: #FFF !important;
         }
         
         footer a:hover {

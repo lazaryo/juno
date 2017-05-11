@@ -6,7 +6,7 @@
                 // JavaScript to be fired on all pages
                 $('.bars').on('click', function() {
                     $(this).removeAttr('href');
-                    $('.lana').toggleClass('isOpen');
+                    $('.juno-wrap').toggleClass('isOpen');
                     $('.off-canvas').toggleClass('show-canvas');
                 });
                 
