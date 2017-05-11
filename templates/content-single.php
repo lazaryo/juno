@@ -5,7 +5,11 @@
         </div>
         
         <footer>
-            <?php wp_link_pages(['before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']); ?>
+            <div class="posted-in">
+                Posted in: <?php echo the_category(', '); ?>
+            </div>
+            <span>Pagination goes here</span>
+            <?php wp_link_pages(); ?>
         </footer>
         
         <?php comments_template('/templates/comments.php'); ?>

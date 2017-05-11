@@ -66,3 +66,19 @@ function SearchFilter($query) {
     return $query;
 }
 add_filter('pre_get_posts','SearchFilter');
+
+/**
+*** Create Page Header BG Image Setting and Upload Control
+***/
+function your_theme_new_customizer_settings($wp_customize) {
+// add a setting for the page-header bg image
+$wp_customize->add_setting('page_header_bg_image');
+// Add a control to upload the page-header bg image
+$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'page_header_bg_image',
+array(
+'label' => 'Page Header Background Image',
+'section' => 'title_tagline',
+'settings' => 'page_header_bg_image',
+) ) );
+}
+add_action('customize_register', 'your_theme_new_customizer_settings');

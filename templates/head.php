@@ -22,10 +22,16 @@
     <?php elseif( !is_single() && !is_home() ): ?>
     <style>
         .page-header {
-            /* background: <?php echo get_field('piece_color'); ?>; */
-            /* background: url('<?= get_template_directory_uri(); ?>/dist/images/lana-del-rey-music-to-watch-boys-to.gif'); */
-            /* background: url('<?= get_template_directory_uri(); ?>/dist/images/lana-del-rey-love.gif'); */
-            background: lightgrey;
+            <?php
+            // check to see if the bg image exists and add it to the header
+            if ( get_theme_mod( 'page_header_bg_image' ) ) : ?>
+                background: url('<?php echo get_theme_mod( 'page_header_bg_image' ); ?>');
+            <?php else: // add a fallback if the bg image doesn't exist ?>
+                background: lightgrey;
+            <?php endif; ?>
+            /* background: url('<?= get_template_directory_uri(); ?>/dist/images/space-bg.jpg'); */
+            -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+            filter: grayscale(100%);
         }
     </style>
     
@@ -60,6 +66,10 @@
         }
         
         .off-canvas a:hover {
+            color: <?php echo get_field('piece_color'); ?> !important;
+        }
+        
+        body.single-post .post footer .posted-in a {
             color: <?php echo get_field('piece_color'); ?> !important;
         }
     </style>
