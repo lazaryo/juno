@@ -104,6 +104,27 @@ div.format1 {
             transition: transform .3s;
         }
     }
+    
+    .navigation {
+        width: 100%;
+        padding: 0 15px;
+        
+        .prev, .next {
+            display: inline-block;
+        }
+        
+        .next {
+            float: right;
+        }
+        
+        a {
+            color: #333333;
+            
+            &:hover {
+                color: #23BDE7;
+            }
+        }
+    }
 }
 
 div.format2 {
@@ -118,18 +139,47 @@ div.format2 {
         text-decoration: none;
         vertical-align: middle;
         
-        span {
+        .bg {
             font-size: 25px;
             color: #FFF;
             display: block;
             width: 100%;
             height: 100%;
             border-radius: 5px;
-            line-height: 200px;
             border: 5px solid #333;
             background-size: cover !important;
             background-repeat: no-repeat !important;
             background-position: center !important;
+            position: relative;
+            
+            span {
+                position: absolute;
+                top: 50%;
+                width: 100%;
+                padding: 0 10px;
+                transform: perspective(1px) translate3d(-50%, -50%, 0);
+            }
+        }
+    }
+    
+    .navigation {
+        width: 100%;
+        padding: 0 15px;
+        
+        .prev, .next {
+            display: inline-block;
+        }
+        
+        .next {
+            float: right;
+        }
+        
+        a {
+            color: #333333;
+            
+            &:hover {
+                color: #23BDE7;
+            }
         }
     }
 }
@@ -143,9 +193,9 @@ div.format3 {
             
         > div {
             background: #FFF;
-            box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 
-                        0 3px 1px -2px rgba(0,0,0,.2),
-                        0 1px 5px 0 rgba(0,0,0,.12);
+            -webkit-box-shadow: 7.5px 7.5px 5px 0px rgba(51,51,51,0.2);
+            -moz-box-shadow: 7.5px 7.5px 5px 0px rgba(51,51,51,0.2);
+            box-shadow: 7.5px 7.5px 5px 0px rgba(51,51,51,0.2);
             margin: 15px 0;
             border-radius: 5px;
                 
@@ -175,6 +225,15 @@ div.format3 {
                     i {
                         margin: 0 5px 0 0;
                     }
+                    
+                    a {
+                        color: #333;
+                        
+                        &:hover {
+                            background: #333;
+                            color: #FFF;
+                        }
+                    }
                 }
             }
                 
@@ -184,6 +243,27 @@ div.format3 {
                 color: white;
                 border-bottom-right-radius: 5px;
                 border-bottom-left-radius: 5px;
+            }
+        }
+    }
+    
+    .navigation {
+        width: 100%;
+        padding: 0 15px;
+        
+        .prev, .next {
+            display: inline-block;
+        }
+        
+        .next {
+            float: right;
+        }
+        
+        a {
+            color: #333333;
+            
+            &:hover {
+                color: #23BDE7;
             }
         }
     }

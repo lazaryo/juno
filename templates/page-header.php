@@ -26,6 +26,7 @@
         <?php else: ?>
             <a class="header-title" href="<?php the_permalink(); ?>">
         <?php endif; ?>
+        
         <?php if(is_search()): ?>
             <h1>Results for: <b><?php echo get_search_query(); ?></b></h1>
         <?php elseif (is_author()): ?>

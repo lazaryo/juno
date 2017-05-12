@@ -10,8 +10,8 @@
                     $('.off-canvas').toggleClass('show-canvas');
                 });
                 
-                $('.search-icon').on('click', function() {
-                    $('.off-canvas-search').toggleClass('form-visibility');
+                $('.off-canvas .search-icon').on('click', function() {
+                    $('.off-canvas .off-canvas-search').toggleClass('form-visibility');
                 });
                 
                 $('.switch-dot').on('click', function() {
@@ -23,13 +23,21 @@
                 $('.post').on('mouseover', function() {
                     var postID = $(this).attr('id');
                     var hex = $('#' + postID + ' .color').val();
-                    $('#' + postID + ' span').css({'background': hex});
+                    $('#' + postID + ' .bg').css({'background': hex});
                 });
                 
                 $('.post').on('mouseout', function() {
                     var postID = $(this).attr('id');
-                    var bg = $('#' + postID + ' .bg').val();
-                    $('#' + postID + ' span').css({'background': 'url("' + bg + '")'});
+                    var hasBG = $('#' + postID + ' .has-bg').val();
+                    var bg;
+                    
+                    if (!hasBG) {
+                        bg = $('#' + postID + ' .default-color').val();
+                        $('#' + postID + ' .bg').css({'background': bg});
+                    } else {
+                        bg = $('#' + postID + ' .hidden-bg').val();
+                        $('#' + postID + ' .bg').css({'background': 'url("' + bg + '")'});
+                    }
                 });
 
                 $('#top-wrap a[href^="#"]').click( function(e){
@@ -39,7 +47,7 @@
                     e.preventDefault();
                 });
 
-                $('.nav li.menu-item-has-children > a').click( function(){
+                $('.nav li.menu-item-has-children > a').click( function() {
                     $(this).removeAttr('href');
                     var element = $(this).parent('li');
                     if (element.hasClass('open')) {
@@ -55,6 +63,12 @@
                         element.siblings('li').find('ul').slideUp(250);
                     }
                 });
+                
+                function heyy() {
+                    return 'red';
+                }
+                
+                $('div.format3 div.entry-meta > a').css({"color": heyy()});
             },
             finalize: function() {
                 // JavaScript to be fired on all pages, after page specific JS is fired

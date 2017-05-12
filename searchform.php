@@ -1,4 +1,4 @@
-<div class="search-area" style="color: white; padding: 5px 10px;">
+<div class="search-area">
     <p class="search-title">Search <i class="search-icon fa fa-search"></i></p>
     <form role="search" method="get" class="off-canvas-search" action="<?php echo home_url( '/' ); ?>">
         <input type="search" class="search-field" placeholder="search" value="<?php echo get_search_query() ?>" name="s">

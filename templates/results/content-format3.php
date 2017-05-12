@@ -1,6 +1,6 @@
 <article <?php post_class('col-md-6'); ?>>
    <div>
-        <h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+        <h2 class="entry-title"><a href="<?php the_permalink(); ?>" style="color: <?php echo get_field('piece_color'); ?>"><?php the_title(); ?></a></h2>
         <div class="entry-meta row">
             <div class="col-md-6">
                 <i class="fa fa-clock-o"></i>
@@ -8,7 +8,7 @@
             </div>
             <div class="col-md-6">
                 <i class="fa fa-pencil"></i>
-                <a href="<?= get_author_posts_url(get_the_author_meta('ID')); ?>" rel="author"><?= get_the_author(); ?></a>
+                <a href="<?= get_author_posts_url(get_the_author_meta('ID')); ?>" rel="author" style="color: <?php echo get_field('piece_color'); ?>"><?= get_the_author(); ?></a>
             </div>
             <div class="col-md-12">
                 <i class="fa fa-tag"></i>

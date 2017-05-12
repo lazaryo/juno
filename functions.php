@@ -82,3 +82,8 @@ array(
 ) ) );
 }
 add_action('customize_register', 'your_theme_new_customizer_settings');
+
+add_theme_support( 'infinite-scroll', array(
+    'container' => 'content',
+    'footer' => 'page',
+) );
