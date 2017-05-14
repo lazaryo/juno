@@ -63,12 +63,6 @@
                         element.siblings('li').find('ul').slideUp(250);
                     }
                 });
-                
-                function heyy() {
-                    return 'red';
-                }
-                
-                $('div.format3 div.entry-meta > a').css({"color": heyy()});
             },
             finalize: function() {
                 // JavaScript to be fired on all pages, after page specific JS is fired
@@ -82,6 +76,16 @@
             },
             finalize: function() {
                 // JavaScript to be fired on the home page, after the init JS
+            }
+        },
+        
+        // Single Post page
+        'single': {
+            init: function() {
+                console.log('init works');
+            },
+            finalize: function() {
+                console.log('finalize works');
             }
         },
         

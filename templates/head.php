@@ -20,6 +20,19 @@
         /* home styles go here if they can't go into the scss files */
     </style>
     
+    <?php elseif( is_404() ): ?>
+    <style>
+        .page-header {
+            <?php
+            // check to see if the bg image exists and add it to the header
+            if ( get_theme_mod( 'page_header_bg_image' ) ) : ?>
+                background: url('<?php echo get_theme_mod( 'page_header_bg_image' ); ?>');
+            <?php else: // add a fallback if the bg image doesn't exist ?>
+                background: lightgrey;
+            <?php endif; ?>
+        }
+    </style>
+    
     <?php elseif( !is_single() && !is_home() ): ?>
     <style>
         .page-header {

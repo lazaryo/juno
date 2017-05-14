@@ -2,7 +2,11 @@
 
 <?php $headerStyle = get_field('header_style'); if(is_single()): ?>
     <?php if($headerStyle == 'with-featured'): ?>
-        <div class="page-header with-featured">
+        <?php if (has_post_thumbnail()): ?>
+            <div class="page-header with-featured">
+        <?php else: ?>
+            <div class="page-header just-color">
+        <?php endif; ?>
         <?php else: ?>
         <div class="page-header just-color">
     <?php endif; ?>
@@ -33,6 +37,8 @@
             <h1><?= get_the_author(); ?></h1>
         <?php elseif (is_single()): ?>
             <h1><?php the_title(); ?></h1>
+        <?php elseif (is_404()): ?>
+            <h1>Lost in Space!</h1>
         <?php else: ?>
             <h1><?= Titles\title(); ?></h1>
         <?php endif; wp_reset_query(); ?>
