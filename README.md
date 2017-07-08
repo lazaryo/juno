@@ -1,3 +1,3 @@
-# [Juno](https://github.com/lazaryo/juno)
+# [Lazaryo](https://github.com/lazaryo/lazaryo)
 
-Juno is a custom Wordpress theme.
+Lazaryo is a custom Wordpress theme.
