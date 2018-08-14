@@ -9,7 +9,7 @@
     
     <?php wp_head(); ?>
     <style>
-        /* Patten Background */
+        /* Pattern Background */
         div.juno-wrap {
             background: url('<?= get_template_directory_uri(); ?>/dist/images/dust.png');
         }
